@@ -1,12 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ABN inter</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ABN inter</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+  </head>
+  <body>
+    <div class="global__wrap">
+      <div class="sidebar">
+        <div class="sidebar__logo">
+          <a href="#">
+            <img src="img/logo.png" alt="" />
+          </a>
+        </div>
+        <div class="sidebar__sn">
+          <a href="#">
+            <img src="img/socialFb.svg" alt="Facebook" />
+          </a>
+          <a href="#">
+            <img src="img/socialInsta.svg" alt="Instagram" />
+          </a>
+        </div>
+        <div class="mainDots">
+          <span>Торговые операции</span>
+        </div>
+        <div class="sidebar__language">
+          <div class="sl__wrap">
+            <span>RU</span>
+            <div class="sl__wrap__swith"></div>
+            <span>EN</span>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="mainSlider">
+          <div class="block block1" data-title="О НАС">
+            <section class="block__wrap">asd</section>
+          </div>
+          <div class="block block2" data-title="Текстиль">
+            <section class="block__wrap">asd</section>
+          </div>
+          <div class="block block3" data-title="Техника">
+            <section class="block__wrap">asd</section>
+          </div>
+          <div class="block block3" data-title="Продовольствие">
+            <section class="block__wrap">asd</section>
+          </div>
+          <div class="block block3" data-title="Пром. оборудование">
+            <section class="block__wrap">asd</section>
+          </div>
+          <div class="block block3" data-title="КОНСАЛТИНГ">
+            <section class="block__wrap">asd</section>
+          </div>
+          <div class="block block3" data-title="КОНТАКТЫ">
+            <section class="block__wrap">asd</section>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="js/script.js"></script>
+    <script>
+      $(".mainSlider").slick({
+        infinite: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrow: false,
+        draggable: false,
+        dots: true,
+        appendDots: $(".mainDots"),
+        customPaging: function (slider, i) {
+          var title = $(slider.$slides[i]).data("title");
+          return '<a class="pager__item"> ' + title + " </a>";
+        },
+        responsive: [
+          {
+            breakpoint: 920,
+            settings: {
+              arrow: false,
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              infinite: false,
+              dots: true,
+              draggable: true,
+            },
+          },
+        ],
+      });
+    </script>
+  </body>
 </html>

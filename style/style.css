@@ -1,0 +1,144 @@
+@font-face {
+  font-family: Gb;
+  src: local("bold"), url("../font/ArticulatCF-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: G;
+  src: local("medium"), url("../font/ArticulatCF-Medium.woff") format("woff");
+}
+
+p,
+span,
+li,
+a {
+  font-family: medium;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+.global__wrap {
+  position: relative;
+  display: flex;
+}
+
+.content {
+  margin-left: 200px;
+  background: rgb(122, 116, 116);
+  transition: 0.3s;
+  width: calc(100% - 200px);
+}
+.block {
+  transition: 0.3s;
+}
+.block__wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+  height: 100%;
+  transition: 0.3s;
+}
+.block1 {
+  background: rgb(60, 156, 132);
+}
+.block2 {
+  background: rgb(101, 67, 179);
+}
+.block3 {
+  background: rgb(179, 64, 163);
+}
+
+/*Sidebar*/
+.sidebar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  background: #fff;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 1%;
+}
+.sidebar::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: "";
+  width: 2px;
+  height: 100%;
+  background: #f5f6f8;
+}
+.sidebar__logo {
+  margin-bottom: 15%;
+}
+.sidebar__logo img {
+  width: 100%;
+  height: 100%;
+}
+.sidebar__sn {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 15%;
+}
+.sidebar__sn a {
+  margin: 0 10px;
+}
+.mainDots {
+  position: relative;
+  color: #355070;
+  width: 100%;
+}
+.mainDots span {
+  position: absolute;
+  top: 12%;
+  cursor: pointer;
+  cursor: pointer;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.mainDots span::after {
+  position: absolute;
+  top: 0%;
+  right: -15%;
+  content: url("../img/navArr.svg");
+  color: #355070;
+  cursor: pointer;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.mainDots ul.slick-dots {
+  margin: 0;
+  padding: 0;
+}
+.mainDots ul.slick-dots li {
+  list-style-type: none;
+  margin-bottom: 30px;
+  transition: 0.3s;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.mainDots ul.slick-dots li a.pager__item {
+  font-size: 14px;
+  font-family: medium;
+  color: #355070;
+  font-weight: 500;
+  cursor: pointer;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+/*/Sidebar/*/
