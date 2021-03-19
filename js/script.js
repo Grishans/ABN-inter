@@ -6,6 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
   for (let i = 0; i < Li.length; i++) {
     Li[i].addEventListener("click", function () {
       check();
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
     });
   }
 });
@@ -44,8 +48,90 @@ navSpan.addEventListener("click", function () {
     navListToogle = !navListToogle;
   }
 });
-
 /*/Hidenav/*/
+
+/*LangToogle*/
+let langRU = document.querySelector(".langRU");
+let langEN = document.querySelector(".langEN");
+let langTrigger = document.querySelector(".sl__wrap__swith_trigger");
+let langRUbool = true;
+function changeLangRU() {
+  if (langRUbool) {
+    setTimeout(() => {
+      langTrigger.style.left = "2px";
+    }, 100);
+    setTimeout(() => {
+      langTrigger.style.left = "5px";
+    }, 200);
+    setTimeout(() => {
+      langTrigger.style.left = "8px";
+    }, 300);
+    console.log("RU", langRUbool);
+  } else {
+    langRU.style.color = "#355070";
+    langEN.style.color = "#C7C7C7";
+    langTrigger.style.left = "5px";
+    langTrigger.style.borderRadius = " 15px 20px 0px 15px";
+    langRUbool = !langRUbool;
+    console.log("RU", langRUbool);
+  }
+}
+function changeLangEN() {
+  if (!langRUbool) {
+    setTimeout(() => {
+      langTrigger.style.left = "12px";
+    }, 100);
+    setTimeout(() => {
+      langTrigger.style.left = "18px";
+    }, 200);
+    setTimeout(() => {
+      langTrigger.style.left = "15px";
+    }, 300);
+    console.log("EN", langRUbool);
+  } else {
+    langRU.style.color = "#C7C7C7";
+    langEN.style.color = "#355070";
+    langTrigger.style.left = "15px";
+    langTrigger.style.borderRadius = "20px 15px 15px 0px";
+    langRUbool = !langRUbool;
+    console.log("EN", langRUbool);
+  }
+}
+function changeLangTrigger() {
+  if (langRUbool) {
+    langRU.style.color = "#355070";
+    langEN.style.color = "#C7C7C7";
+    langTrigger.style.left = "15px";
+    langTrigger.style.borderRadius = "20px 15px 15px 0px";
+    langRUbool = !langRUbool;
+    console.log("toogle", langRUbool);
+  } else {
+    langRU.style.color = "#C7C7C7";
+    langEN.style.color = "#355070";
+    langTrigger.style.left = "5px";
+    langTrigger.style.borderRadius = "15px 20px 0px 15px";
+    langRUbool = !langRUbool;
+    console.log("toogle", langRUbool);
+  }
+}
+
+if (!localStorage.getItem("lang")) {
+  localStorage.setItem("lang", "ru");
+}
+
+langRU.addEventListener("click", () => {
+  changeLangRU();
+  localStorage.setItem("lang", "ru");
+});
+langEN.addEventListener("click", () => {
+  changeLangEN();
+  localStorage.setItem("lang", "en");
+});
+document.querySelector(".sl__wrap__swith").addEventListener("click", () => {
+  changeLangTrigger();
+});
+
+/*/LangToogle/*/
 
 document.addEventListener("DOMContentLoaded", () => {
   let slideBTN = document.querySelectorAll(".slick-arrow");

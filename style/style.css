@@ -6,14 +6,24 @@
   font-family: G;
   src: local("medium"), url("../font/ArticulatCF-Medium.woff") format("woff");
 }
-
+:root {
+  --grey: #f5f6f8;
+  --blue: #355070;
+  --orange: #eaac8b;
+  --globalPadding: 7%;
+}
 p,
 span,
 li,
 a {
-  font-family: medium;
+  font-family: G;
 }
-
+.slick-slide {
+  outline: none;
+}
+body::-webkit-scrollbar {
+  width: 0;
+}
 body {
   margin: 0;
   padding: 0;
@@ -25,7 +35,6 @@ body {
 
 .content {
   margin-left: 200px;
-  background: rgb(122, 116, 116);
   transition: 0.3s;
   width: calc(100% - 200px);
 }
@@ -39,15 +48,6 @@ body {
   min-width: 100%;
   height: 100%;
   transition: 0.3s;
-}
-.block1 {
-  background: rgb(60, 156, 132);
-}
-.block2 {
-  background: rgb(101, 67, 179);
-}
-.block3 {
-  background: rgb(179, 64, 163);
 }
 
 /*Sidebar*/
@@ -94,6 +94,7 @@ body {
   position: relative;
   color: #355070;
   width: 100%;
+  margin-bottom: 100%;
 }
 .mainDots span {
   position: absolute;
@@ -141,4 +142,436 @@ body {
   -webkit-user-select: none;
   user-select: none;
 }
+.sidebar__language {
+  width: 100%;
+}
+.sl__wrap {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+}
+.sl__wrap a {
+  color: #355070;
+  font-size: 14px;
+  text-decoration: none;
+}
+.sl__wrap__swith {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  border: 1px solid #dbdbdb;
+  border-radius: 15px;
+  background: #fff;
+  overflow: hidden;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.sl__wrap__swith_trigger {
+  position: absolute;
+  left: 5px;
+  top: 4px;
+  content: "";
+  width: 15px;
+  height: 10px;
+  background: #355070;
+  border-radius: 15px 20px 0px 15px;
+  transition: 0.3s;
+  cursor: pointer;
+}
 /*/Sidebar/*/
+
+.fullBlock {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100vh;
+  max-height: 100vh;
+  background-color: var(--grey);
+  padding-left: var(--globalPadding);
+}
+/*About*/
+.about {
+  display: flex;
+  flex-direction: column;
+}
+.fba__bg1 {
+  position: absolute;
+  top: 25%;
+  right: 10%;
+  width: 50%;
+  z-index: 1;
+}
+.fba__bg1 img {
+  width: 100%;
+}
+.fba__bg2 {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 50%;
+  opacity: 0.5;
+  z-index: 1;
+}
+.fba__bg2 img {
+  width: 100%;
+}
+.fba_bg3 {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.fba_bg3 img {
+  height: 40%;
+  margin: 0 auto;
+  margin-top: 20%;
+}
+.fba_bg4 {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.fba_bg4 img {
+  height: 110%;
+  margin: 0 auto;
+}
+.mainTitle {
+  position: absolute;
+  top: 0;
+  right: 15%;
+  font-size: 120px;
+  text-transform: uppercase;
+  color: #000;
+  opacity: 0.05;
+  font-family: Gb;
+  font-weight: 900;
+}
+.mainTitle::after {
+  content: "•";
+  position: absolute;
+  top: -7%;
+  right: -17%;
+}
+.fullblock__about__wrap {
+  position: relative;
+  z-index: 2;
+  width: 30%;
+  height: 100%;
+  padding-top: 15%;
+}
+p.content__title {
+  position: relative;
+  font-size: 48px;
+  font-family: Gb;
+  line-height: 100%;
+  margin-bottom: 20px;
+  z-index: 2;
+}
+p.content__text {
+  font-size: 14px;
+}
+span.mainBtn {
+  display: block;
+  padding: 4px;
+  width: 175px;
+  height: 65px;
+  background: linear-gradient(
+    to left,
+    rgba(234, 172, 139, 1),
+    rgba(58, 90, 128, 1)
+  );
+  border-radius: 40px;
+  margin: 0 auto;
+}
+span.mainBtn span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+  background: var(--blue);
+  color: #fff;
+  cursor: pointer;
+}
+.contentBlock {
+  position: relative;
+  width: 100%;
+  padding-left: var(--globalPadding);
+  box-sizing: border-box;
+}
+.contentBlock__about__wrap {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+}
+.caw__title {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 65px;
+}
+.caw__text {
+  width: 20%;
+  margin-bottom: 33px;
+}
+.cawt_block {
+  margin-bottom: 35px;
+}
+p.secondTitle {
+  font-family: Gb;
+  font-size: 24px;
+  margin: 0;
+  margin-bottom: 22px;
+}
+.caw__btn {
+  margin-left: -7%;
+}
+.caw__btn .mainBtn {
+  margin: 0 auto;
+}
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 62px;
+  font-size: 12px;
+  width: 95%;
+}
+.footer a {
+  position: relative;
+  text-decoration: none;
+  color: #000;
+}
+.footer a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background: #000;
+  transition: 0.3s;
+}
+.footer a:hover::before {
+  width: 100%;
+}
+/*/About/*/
+
+/*Textile*/
+.textile {
+  position: relative;
+  flex-direction: column;
+}
+.mainTitle__textile1 {
+  right: unset;
+  left: 2%;
+}
+.mainTitle__textile2 {
+  right: -30%;
+}
+.ftw__bg1 {
+  position: absolute;
+  width: 40%;
+  right: 10%;
+  bottom: 5%;
+}
+.ftw__bg1 img {
+  width: 100%;
+  height: 100%;
+}
+.fullBlock__textile__wrap {
+  position: relative;
+  width: 35%;
+  padding-top: 16%;
+  z-index: 2;
+}
+.ctw__block1 {
+  margin-bottom: 200px;
+}
+.ctwb1__text {
+  position: relative;
+  z-index: 2;
+}
+.ctwb1__text {
+  width: 50%;
+  margin: 0 auto;
+}
+.ctwb1__text p.content__title {
+  margin-top: 80px;
+}
+.ctwb1__text p.content__text {
+  font-size: 18px;
+}
+.textile__block1__bg {
+  position: absolute;
+  top: -20px;
+  left: 2%;
+}
+.ctw__block2 {
+  position: relative;
+}
+.textile__block2__bg1 {
+  position: absolute;
+  right: -20px;
+  top: 0;
+}
+.textile__block2__bg2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 22%;
+}
+.ctw__block2 ol {
+  position: relative;
+  z-index: 2;
+  padding-left: 10%;
+}
+.ctw__block2 ol:first-child {
+  padding-left: 0;
+  margin-bottom: 60px;
+}
+.ctw__block2 ol li {
+  list-style-type: none;
+  width: 450px;
+}
+.ctw__block2 ol li .content__text {
+  font-size: 18px;
+}
+/*/Textile/*/
+
+/*Electronics*/
+section.electronics {
+  display: flex;
+  flex-direction: column;
+}
+section.electronics .contentBlock {
+  padding-left: 4%;
+}
+.mainTitle__electronic {
+  right: unset;
+  left: 2%;
+}
+.mainTitle__electronic1 {
+  right: -25%;
+}
+img.fullBlock__bg {
+  position: absolute;
+  top: 25%;
+  left: 2%;
+  width: 50%;
+}
+
+.fullBlock__electroinic__wrap {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding-top: 15%;
+}
+
+.few__block {
+  width: 40%;
+  margin-right: 4%;
+}
+.few__block .content__text {
+  font-size: 18px;
+}
+img.electronic__content__bg1 {
+  position: absolute;
+  left: -4%;
+  top: -3%;
+}
+.contentBlock__electronics__wrap {
+  display: flex;
+  flex-direction: column;
+}
+.contentBlock__electronics__wrap p.content__title {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 160px;
+}
+.contentBlock__electronic__block1 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 2;
+  margin-bottom: 140px;
+}
+
+.ceb1__wrap {
+  position: relative;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  margin-right: 20%;
+  z-index: 2;
+}
+.cew__text p.content__title {
+  margin: 0;
+  text-align: left;
+  margin-bottom: 33px;
+}
+p.content__text {
+  font-size: 18px;
+}
+.contentBlock__electronic__block2 {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  margin-bottom: 170px;
+}
+.ceb2__wrap {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+.ceb2w__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+}
+.ceb2w__block img {
+  width: 40%;
+  margin-bottom: 25px;
+}
+.ceb2w__block p.secondTitle {
+  margin-bottom: 22px;
+}
+.ceb2w__block p.text {
+  text-align: justify;
+  font-size: 18px;
+}
+.contentBlock__electronic__block3 {
+  position: relative;
+  margin-bottom: 30px;
+}
+.cwb3__bg {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.cwb3__wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  z-index: 2;
+}
+.cwb3__wrap p.content__title {
+  margin-bottom: 30px;
+}
+.cwb3__wrap p.content__text {
+  margin-bottom: 85px;
+}
+/*/Electronics/*/
