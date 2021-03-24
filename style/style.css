@@ -17,6 +17,7 @@ span,
 li,
 a {
   font-family: G;
+  margin: 0;
 }
 .slick-slide {
   outline: none;
@@ -283,6 +284,7 @@ p.content__title {
   margin-bottom: 50px;
 }
 span.mainBtn {
+  position: relative;
   display: block;
   padding: 4px;
   width: 175px;
@@ -1122,5 +1124,94 @@ section.consulting {
 .fc3w__block2__block {
   width: 28%;
 }
-
 /*/Consulting/*/
+
+/*Contacts*/
+.fullBlock__contacts__wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15%;
+}
+.fcw__form {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+.fcw__form form {
+  display: flex;
+  flex-direction: column;
+}
+.fcw__form form label {
+  position: relative;
+  font-size: 14px;
+  font-family: Gb;
+  color: #355070;
+  margin: 0 0 20px 20px;
+  display: flex;
+}
+.fcw__form form p {
+  color: #d95858;
+  margin: 0;
+  margin-left: 5px;
+  font-size: 16px;
+}
+.fcw__form form input,
+.fcw__form form textarea {
+  background: #fff;
+  border: 2px solid rgba(53, 80, 112, 0.5);
+  box-sizing: border-box;
+  border-radius: 10px;
+  min-height: 45px;
+  font-size: 12px;
+  color: #355070;
+  margin-bottom: 25px;
+}
+.fcw__form form textarea {
+  height: 90px;
+  resize: none;
+}
+.fcw__form form span.mainBtn::before {
+  content: url(../img/Contacts/sendArrow.svg);
+  position: absolute;
+  top: 30%;
+  right: 20px;
+  height: 30px;
+  width: 30px;
+}
+.fcw__form form span.mainBtn {
+  margin: 0 auto;
+}
+.fcw__form form span.mainBtn input#formBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+  background: var(--blue);
+  color: #fff;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  padding-right: 30px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.fcw__map {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.map__contact {
+  display: flex;
+  margin-top: 25px;
+}
+.mc__block {
+  display: flex;
+  margin-right: 10%;
+  width: 30%;
+}
+.mc__block img {
+  margin-right: 10%;
+}
+/*/Contacts/*/
