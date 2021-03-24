@@ -1214,4 +1214,12 @@ section.consulting {
 .mc__block img {
   margin-right: 10%;
 }
+section.contacts {
+  display: flex;
+  flex-direction: column;
+  background: var(--grey);
+}
+section.contacts .footer {
+  margin-bottom: 20px;
+}
 /*/Contacts/*/
